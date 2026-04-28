@@ -157,6 +157,6 @@ Colección: productos
 - [x] Tailwind CSS v3 configurado
 - [x] Firebase conectado (AngularFire)
 - [x] Firestore con colecciones categorias y productos
-- [ ] Estructura de carpetas creada
+- [x] Estructura de carpetas creada
 - [ ] Componentes desarrollados
 - [ ] Deploy en Firebase Hosting
