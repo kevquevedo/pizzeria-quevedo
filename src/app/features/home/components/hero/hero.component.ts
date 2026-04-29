@@ -1,9 +1,9 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'app-menu',
+  selector: 'app-hero',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css',
+  templateUrl: './hero.component.html',
+  styleUrl: './hero.component.css',
 })
-export class MenuComponent {}
+export class HeroComponent {}

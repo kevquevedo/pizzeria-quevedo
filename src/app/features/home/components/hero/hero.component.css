@@ -1,0 +1,10 @@
+.anim-1 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s  both; }
+.anim-2 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s  both; }
+.anim-3 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both; }
+.anim-4 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both; }
+.anim-5 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1s    both; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

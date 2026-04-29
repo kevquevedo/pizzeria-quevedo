@@ -27,11 +27,10 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Use `input()` and `output()` functions instead of decorators
 - Use `computed()` for derived state
 - Set `changeDetection: ChangeDetectionStrategy.OnPush` in `@Component` decorator
-- Prefer inline templates for small components
+- Always use `templateUrl` pointing to an external `.html` and `styleUrl` pointing to an external `.css`. Never use inline `template` or `styles` arrays in `@Component`.
 - Prefer Reactive forms instead of Template-driven ones
 - Do NOT use `ngClass`, use `class` bindings instead
 - Do NOT use `ngStyle`, use `style` bindings instead
-- When using external templates/styles, use paths relative to the component TS file.
 
 ## State Management
 
@@ -53,6 +52,12 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Design services around a single responsibility
 - Use the `providedIn: 'root'` option for singleton services
 - Use the `inject()` function instead of constructor injection
+
+## Estilos
+
+- Usar Tailwind CSS al máximo en los templates `.html`
+- Los archivos `.css` solo pueden contener `@keyframes` y reglas sin soporte nativo en Tailwind v3 (ej: `scrollbar-hide`)
+- Nunca escribir layout, colores, tipografía ni espaciado en los `.css`
 
 ---
 
@@ -158,5 +163,8 @@ Colección: productos
 - [x] Firebase conectado (AngularFire)
 - [x] Firestore con colecciones categorias y productos
 - [x] Estructura de carpetas creada
-- [ ] Componentes desarrollados
+- [x] Componentes compartidos: navbar, footer, whatsapp-button
+- [x] HomeComponent: sección Hero + sección Menú con filtro por categorías
+- [ ] HomeComponent: secciones restantes (Promociones, Proceso, Badges, Nosotros, Galería, Reseñas, Ubicación)
+- [ ] MenuComponent (catálogo completo)
 - [ ] Deploy en Firebase Hosting

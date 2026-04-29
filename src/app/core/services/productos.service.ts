@@ -1,6 +1,6 @@
-import { Injectable, inject, computed, Signal } from '@angular/core';
+import { inject, Injectable, computed, Signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Firestore, collection, onSnapshot } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Producto } from '../models/producto.model';
 
@@ -9,10 +9,15 @@ export class ProductosService {
   private readonly firestore = inject(Firestore);
 
   readonly productos = toSignal(
-    collectionData(
-      collection(this.firestore, 'productos'),
-      { idField: 'id' }
-    ) as Observable<Producto[]>,
+    new Observable<Producto[]>(subscriber => {
+      return onSnapshot(
+        collection(this.firestore, 'productos'),
+        snapshot => subscriber.next(
+          snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Producto))
+        ),
+        error => subscriber.error(error)
+      );
+    }),
     { initialValue: [] as Producto[] }
   );
 
