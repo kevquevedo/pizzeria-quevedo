@@ -19,19 +19,20 @@
 ## 📸 Capturas del sitio
 
 ### Hero — Landing
-![Hero de Pizzería Quevedo](docs/screenshots/hero.png)
+![Hero de Pizzería Quevedo](<img width="2509" height="1086" alt="image" src="https://github.com/user-attachments/assets/bf8e965a-9eb0-410d-bd8c-4546d442cb11" />)
 
 ### Menú interactivo con filtros
-![Sección menú con categorías](docs/screenshots/menu.png)
+![Sección menú con categorías](<img width="2509" height="1115" alt="image" src="https://github.com/user-attachments/assets/2d2bec1b-3bef-44b4-b8dd-cee1239ec3a9" />)
 
 ### Nuestra Filosofía
-![Cards La Masa, El Horno, Los Ingredientes](docs/screenshots/filosofia.png)
+![Cards La Masa, El Horno, Los Ingredientes](<img width="2490" height="684" alt="image" src="https://github.com/user-attachments/assets/2780f48a-872a-4d7c-bfaf-bc2736af5af7" />)
 
 ### Galería y Reseñas
-![Galería y reseñas de clientes](docs/screenshots/galeria-resenas.png)
+![Galería de fotos](<img width="2499" height="944" alt="image" src="https://github.com/user-attachments/assets/8fd7547a-f330-4e63-b243-365420621a5b" />)
+![Reseñas de clientes](<img width="2486" height="877" alt="image" src="https://github.com/user-attachments/assets/05666422-46b1-4257-bacc-e1d6f9e49636" />)
 
 ### Ubicación y Horarios
-![Mapa y horarios del local](docs/screenshots/ubicacion.png)
+![Mapa y horarios del local](<img width="2486" height="891" alt="image" src="https://github.com/user-attachments/assets/b531e822-dff0-42e2-94dd-21198b1c16fa" />)
 
 ---
 
@@ -85,25 +86,35 @@ npm start
 # → http://localhost:4200
 ```
 
-### Configuración de Firebase
 
-Creá el archivo `src/environments/environment.ts`:
+## ⚙️ Variables de entorno
 
+El archivo `src/environments/environment.ts` **no se sube al repositorio** por seguridad. En su lugar existe `src/environments/environment.example.ts` como plantilla.
+
+Para configurar tu entorno local:
+
+**1.** Copiá el archivo de ejemplo:
+```bash
+cp src/environments/environment.example.ts src/environments/environment.ts
+```
+
+**2.** Completá con tus claves de Firebase:
 ```typescript
 export const environment = {
   production: false,
   firebase: {
     apiKey: 'TU_API_KEY',
-    authDomain: 'TU_PROJECT.firebaseapp.com',
-    projectId: 'TU_PROJECT_ID',
-    storageBucket: 'TU_PROJECT.appspot.com',
+    authDomain: 'tu-proyecto.firebaseapp.com',
+    projectId: 'tu-proyecto',
+    storageBucket: 'tu-proyecto.appspot.com',
     messagingSenderId: 'TU_SENDER_ID',
     appId: 'TU_APP_ID',
   },
 };
 ```
 
-> ⚠️ Nunca subas las claves de Firebase al repositorio.
+> 🔑 Encontrás los valores en **Firebase Console → Project Settings → SDK setup and configuration**.  
+> ⚠️ Asegurate de que `environment.ts` esté en el `.gitignore`.
 
 ---
 
@@ -189,5 +200,5 @@ pizzeria-quevedo/
 
 ---
 
-> © 2026 Pizzería Quevedo. Hecho con ❤️ por </qdev>.
+> © 2026 Pizzería Quevedo. Hecho con ❤️ por Kevin.
 
