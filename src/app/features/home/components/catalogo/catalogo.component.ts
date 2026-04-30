@@ -1,6 +1,8 @@
 import { Component, ChangeDetectionStrategy, inject, signal, computed } from '@angular/core';
 import { CategoriasService } from '../../../../core/services/categorias.service';
 import { ProductosService } from '../../../../core/services/productos.service';
+import { CarritoService } from '../../../../core/services/carrito.service';
+import { Producto } from '../../../../core/models/producto.model';
 
 @Component({
   selector: 'app-catalogo',
@@ -11,6 +13,7 @@ import { ProductosService } from '../../../../core/services/productos.service';
 export class CatalogoComponent {
   private readonly categoriasService = inject(CategoriasService);
   private readonly productosService  = inject(ProductosService);
+  private readonly carritoService    = inject(CarritoService);
 
   protected readonly categorias = this.categoriasService.categorias;
   protected readonly productos  = this.productosService.productos;
@@ -57,4 +60,11 @@ export class CatalogoComponent {
     const n = Number(precio);
     return Number.isFinite(n) ? n.toLocaleString('es-AR') : '—';
   }
+
+  protected cantidadEnCarrito(productoId: string): number {
+    return this.carritoService.items().find(i => i.producto.id === productoId)?.cantidad ?? 0;
+  }
+
+  protected agregar(producto: Producto): void { this.carritoService.agregar(producto); }
+  protected quitar(producto: Producto): void  { this.carritoService.quitar(producto);  }
 }

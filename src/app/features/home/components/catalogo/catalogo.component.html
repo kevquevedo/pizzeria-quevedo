@@ -106,7 +106,42 @@
             <div class="p-4 flex flex-col gap-1.5">
               <h3 class="text-quevedo-text font-semibold text-base leading-tight">{{ p.nombre }}</h3>
               <p class="text-quevedo-muted text-sm leading-relaxed line-clamp-2">{{ p.descripcion }}</p>
-              <p class="text-quevedo-gold font-bold text-lg mt-1">$&nbsp;{{ formatPrecio(p.precio) }}</p>
+
+              <div class="flex items-center justify-between mt-2 gap-2">
+                <p class="text-quevedo-gold font-bold text-lg">$&nbsp;{{ formatPrecio(p.precio) }}</p>
+
+                @if (cantidadEnCarrito(p.id) === 0) {
+                  <button
+                    (click)="agregar(p)"
+                    class="px-3 py-1.5 rounded-lg bg-quevedo-surface-light text-quevedo-muted hover:bg-quevedo-red hover:text-quevedo-text text-xs font-semibold tracking-widest uppercase transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-quevedo-red focus-visible:outline-offset-2 flex-shrink-0"
+                    [attr.aria-label]="'Agregar ' + p.nombre + ' al carrito'">
+                    + Agregar
+                  </button>
+                } @else {
+                  <div
+                    class="flex items-center bg-quevedo-surface-light rounded-lg flex-shrink-0"
+                    role="group"
+                    [attr.aria-label]="'Cantidad de ' + p.nombre">
+                    <button
+                      (click)="quitar(p)"
+                      class="w-8 h-8 flex items-center justify-center text-quevedo-muted hover:text-quevedo-text text-sm font-bold transition-colors rounded-l-lg focus-visible:outline-2 focus-visible:outline-quevedo-red"
+                      [attr.aria-label]="'Quitar uno de ' + p.nombre">
+                      −
+                    </button>
+                    <span
+                      class="w-7 text-center text-quevedo-text text-sm font-bold tabular-nums"
+                      aria-live="polite">
+                      {{ cantidadEnCarrito(p.id) }}
+                    </span>
+                    <button
+                      (click)="agregar(p)"
+                      class="w-8 h-8 flex items-center justify-center text-quevedo-muted hover:text-quevedo-red text-sm font-bold transition-colors rounded-r-lg focus-visible:outline-2 focus-visible:outline-quevedo-red"
+                      [attr.aria-label]="'Agregar otro de ' + p.nombre">
+                      +
+                    </button>
+                  </div>
+                }
+              </div>
             </div>
 
           </article>

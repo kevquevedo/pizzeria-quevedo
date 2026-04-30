@@ -27,23 +27,46 @@
         }
       </ul>
 
-      <!-- Botón hamburguesa -->
-      <button
-        class="md:hidden p-2 rounded-md text-quevedo-muted hover:text-quevedo-text hover:bg-quevedo-surface-light transition-colors focus-visible:outline-2 focus-visible:outline-quevedo-red"
-        [attr.aria-expanded]="menuAbierto()"
-        aria-controls="mobile-menu"
-        [attr.aria-label]="menuAbierto() ? 'Cerrar menú' : 'Abrir menú'"
-        (click)="toggleMenu()">
-        @if (menuAbierto()) {
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      <!-- Acciones: carrito + hamburguesa -->
+      <div class="flex items-center gap-1">
+
+        <!-- Icono carrito -->
+        <a
+          routerLink="/carrito"
+          class="relative p-2 rounded-md text-quevedo-muted hover:text-quevedo-text transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-quevedo-red focus-visible:outline-offset-2"
+          [attr.aria-label]="cartBadge() ? 'Ver carrito (' + cartBadge() + ' items)' : 'Ver carrito'"
+          (click)="menuAbierto.set(false)">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
           </svg>
-        } @else {
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-        }
-      </button>
+          @if (cartBadge()) {
+            <span
+              class="absolute -top-0.5 -right-0.5 min-w-[1.1rem] h-[1.1rem] px-0.5 rounded-full bg-quevedo-red text-white text-[0.6rem] font-bold flex items-center justify-center leading-none"
+              aria-hidden="true">
+              {{ cartBadge() }}
+            </span>
+          }
+        </a>
+
+        <!-- Botón hamburguesa (solo mobile) -->
+        <button
+          class="md:hidden p-2 rounded-md text-quevedo-muted hover:text-quevedo-text hover:bg-quevedo-surface-light transition-colors focus-visible:outline-2 focus-visible:outline-quevedo-red"
+          [attr.aria-expanded]="menuAbierto()"
+          aria-controls="mobile-menu"
+          [attr.aria-label]="menuAbierto() ? 'Cerrar menú' : 'Abrir menú'"
+          (click)="toggleMenu()">
+          @if (menuAbierto()) {
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          } @else {
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          }
+        </button>
+      </div>
+
     </div>
 
     <!-- Menú móvil -->
@@ -60,6 +83,22 @@
               </a>
             </li>
           }
+          <li>
+            <a
+              routerLink="/carrito"
+              class="flex items-center gap-2 px-4 py-3 text-quevedo-muted hover:text-quevedo-text hover:bg-quevedo-surface-light rounded-md text-sm font-medium tracking-widest uppercase transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-quevedo-red"
+              (click)="menuAbierto.set(false)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007Z" />
+              </svg>
+              Carrito
+              @if (cartBadge()) {
+                <span class="ml-auto min-w-[1.25rem] h-5 px-1 rounded-full bg-quevedo-red text-white text-[0.6rem] font-bold flex items-center justify-center">
+                  {{ cartBadge() }}
+                </span>
+              }
+            </a>
+          </li>
         </ul>
       </div>
     }

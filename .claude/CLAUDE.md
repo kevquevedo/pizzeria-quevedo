@@ -164,7 +164,14 @@ Colección: productos
 - [x] Firestore con colecciones categorias y productos
 - [x] Estructura de carpetas creada
 - [x] Componentes compartidos: navbar, footer, whatsapp-button
-- [x] HomeComponent: sección Hero + sección Menú con filtro por categorías
-- [ ] HomeComponent: secciones restantes (Promociones, Proceso, Badges, Nosotros, Galería, Reseñas, Ubicación)
-- [ ] MenuComponent (catálogo completo)
-- [ ] Deploy en Firebase Hosting
+- [x] HomeComponent completo (Hero, Catálogo, Proceso, Badges, Nosotros, Galería, Reseñas, Ubicación)
+- [x] MenuComponent en /menu (catálogo completo, reutiliza CatalogoComponent)
+- [x] Deploy en Firebase Hosting
+- [x] Etapa 2: Sistema de Pedidos
+  - [x] CarritoService (signals: items, total, cantidadTotal; métodos: agregar, quitar, eliminar, limpiar)
+  - [x] Botones +/- en cards de CatalogoComponent
+  - [x] Badge de carrito en Navbar con RouterLink a /carrito
+  - [x] CarritoComponent en /carrito (lista items, modify qty, eliminar, total, finalizar)
+  - [x] PedidosService: guarda pedido en Firestore (colección "pedidos") con serverTimestamp
+  - [x] Pantalla de confirmación con número de pedido
+- [ ] Etapa 3: Integración Mercado Pago
