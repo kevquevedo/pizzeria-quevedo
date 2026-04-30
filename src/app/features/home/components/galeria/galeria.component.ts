@@ -9,7 +9,7 @@ interface ImagenGaleria {
 const IMAGENES: ImagenGaleria[] = [
   { src: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=700&h=700&fit=crop', alt: 'Pizza Muzzarella de cerca' },
   { src: 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=700&h=700&fit=crop', alt: 'Preparación artesanal de pizza' },
-  { src: 'https://images.unsplash.com/photo-1510526685373-74ab69a63e97?w=700&h=700&fit=crop', alt: 'Horno de barro encendido' },
+  { src: 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=700&h=700&fit=crop', alt: 'Horno de barro con fuego' },
   { src: 'https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?w=700&h=700&fit=crop', alt: 'Pizza margherita recién salida del horno' },
   { src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&h=700&fit=crop', alt: 'Ambiente de la pizzería' },
   { src: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700&h=700&fit=crop', alt: 'Pizza con toppings variados' },

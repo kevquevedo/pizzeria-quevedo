@@ -1,13 +1,39 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>PizzeriaQuevedo</title>
+  <title>Pizzería Quevedo | Pizza Napolitana en Buenos Aires</title>
+  <meta name="description" content="Pizzería Quevedo — Auténtica pizza napolitana en Buenos Aires. Masa madre, horno a leña, ingredientes frescos.">
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
-  <app-root></app-root>
+<body style="background-color:#0A0A0A;margin:0;">
+  <app-root>
+    <!-- Spinner inicial — Angular lo reemplaza automáticamente al cargar -->
+    <div style="
+      position: fixed; inset: 0;
+      background: #0A0A0A;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      z-index: 9999;
+    ">
+      <div style="
+        width: 44px; height: 44px;
+        border: 2.5px solid #1E1E1E;
+        border-top-color: #E63946;
+        border-radius: 50%;
+        animation: qs 0.75s linear infinite;
+      "></div>
+      <div style="display: flex; align-items: center; gap: 0.2rem;">
+        <span style="color: #E63946; font-family: system-ui, sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: -0.02em;">Pizzería</span>
+        <span style="color: #F1F1F1; font-family: system-ui, sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: -0.02em;">Quevedo</span>
+      </div>
+      <style>@keyframes qs { to { transform: rotate(360deg); } }</style>
+    </div>
+  </app-root>
 </body>
 </html>
