@@ -32,7 +32,8 @@
 ![Reseñas de clientes](<img width="2486" height="877" alt="image" src="https://github.com/user-attachments/assets/05666422-46b1-4257-bacc-e1d6f9e49636" />)
 
 ### Ubicación y Horarios
-![Mapa y horarios del local](<img width="2486" height="891" alt="image" src="https://github.com/user-attachments/assets/b531e822-dff0-42e2-94dd-21198b1c16fa" />)
+![Mapa y horarios del local](<img width="2486" height="891" alt="image" src="https://github.com/user-attachments/assets/98555329-dbce-4cdc-b350-5e2523f97876" />
+)
 
 ---
 
