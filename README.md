@@ -19,7 +19,7 @@
 ## 📸 Capturas del sitio
 
 ### Hero — Landing
-![Hero de Pizzería Quevedo](<img width="2509" height="1086" alt="image" src="https://github.com/user-attachments/assets/bf8e965a-9eb0-410d-bd8c-4546d442cb11" />)
+![Hero de Pizzería Quevedo](https://github.com/user-attachments/assets/d800c1be-bc1d-430b-b495-6f663bbb8222)
 
 ### Menú interactivo con filtros
 ![Sección menú con categorías](<img width="2509" height="1115" alt="image" src="https://github.com/user-attachments/assets/2d2bec1b-3bef-44b4-b8dd-cee1239ec3a9" />)
