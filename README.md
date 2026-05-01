@@ -19,21 +19,20 @@
 ## 📸 Capturas del sitio
 
 ### Hero — Landing
-![Hero de Pizzería Quevedo](https://github.com/user-attachments/assets/d800c1be-bc1d-430b-b495-6f663bbb8222)
+![Hero de Pizzería Quevedo](https://github.com/user-attachments/assets/81044ef7-a6ae-4d8f-8aa1-85d7229cb5a9)
 
 ### Menú interactivo con filtros
-![Sección menú con categorías](<img width="2509" height="1115" alt="image" src="https://github.com/user-attachments/assets/2d2bec1b-3bef-44b4-b8dd-cee1239ec3a9" />)
+![Sección menú con categorías](https://github.com/user-attachments/assets/37b56721-7d39-4b9d-8c95-af6e3b084984)
 
 ### Nuestra Filosofía
-![Cards La Masa, El Horno, Los Ingredientes](<img width="2490" height="684" alt="image" src="https://github.com/user-attachments/assets/2780f48a-872a-4d7c-bfaf-bc2736af5af7" />)
+![Cards La Masa, El Horno, Los Ingredientes](https://github.com/user-attachments/assets/05177026-44a3-4e32-bff5-f822954adeba)
 
 ### Galería y Reseñas
-![Galería de fotos](<img width="2499" height="944" alt="image" src="https://github.com/user-attachments/assets/8fd7547a-f330-4e63-b243-365420621a5b" />)
-![Reseñas de clientes](<img width="2486" height="877" alt="image" src="https://github.com/user-attachments/assets/05666422-46b1-4257-bacc-e1d6f9e49636" />)
+![Galería de fotos](https://github.com/user-attachments/assets/1b6f5cd2-7f16-4271-9027-8edf5467af41)
+![Reseñas de clientes](https://github.com/user-attachments/assets/d800c1be-bc1d-430b-b495-6f663bbb8222)
 
 ### Ubicación y Horarios
-![Mapa y horarios del local](<img width="2486" height="891" alt="image" src="https://github.com/user-attachments/assets/98555329-dbce-4cdc-b350-5e2523f97876" />
-)
+![Mapa y horarios del local](https://github.com/user-attachments/assets/94f50038-650b-44e9-870b-714d8d24cb19)
 
 ---
 
